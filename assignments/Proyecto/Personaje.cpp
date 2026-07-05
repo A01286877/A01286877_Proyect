@@ -68,11 +68,17 @@ int Personaje::calculaAtaque(Personaje& objetivo){
     }
 }
 
-void recibeAtaque(int ptosAtaque){
+void Personaje::recibeAtaque(int ptosAtaque){
     salud = salud - ptosAtaque;
 
     if(salud < 0)
     {
         salud = 0;
     }
+}
+
+void Personaje::atacar(Personaje& objetivo){
+    int dano = calculaAtaque(objetivo);
+    objetivo.recibeAtaque(dano);
+
 }
