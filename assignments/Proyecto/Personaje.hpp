@@ -12,10 +12,10 @@ class Personaje
     double getAtaque() const;
     double getNivel() const;
 
-    void setVida( double vida);
-    void setSalud( double salud);
-    void setAtaque( double ataque);
-    void setNivel( double nivel);
+    void setVida( double nuevaVida);
+    void setSalud( double nuevaSalud);
+    void setAtaque( double nuevoAtaque);
+    void setNivel( double nuevoNivel);
 
     int porcentajeSalud() const;
     void imprimeBarra();

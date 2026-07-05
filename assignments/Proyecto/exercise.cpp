@@ -1,8 +1,11 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include "Personaje.hpp"
 using namespace std;
 
 int main() 
 {
-  cout << "Hello World"<< endl;
+  srand(time(nullptr));
   return 0;
 }
