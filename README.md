@@ -1,25 +1,34 @@
-# Ejercicios - Básicos
+---
+title: Personaje
+---
+classDiagram
+    class Personaje
+    Personaje : +Personaje()
+    Personaje : +Personaje(double vida, double salud, double ataque, double nivel)
 
-Ubíquese en la **carpeta fuente del proyecto** deseado, use:
+    Personaje : +double getVida()
+    Personaje : +double getSalud()
+    Personaje : +double getAtaque()
+    Personaje : +double getNivel()
 
-```
-cd <assignments/NombreCarpeta>
+    Personaje : +setVida( double nuevaVida)
+    Personaje : +setSalud( double nuevaSalud)
+    Personaje : +setAtaque( double nuevoAtaque)
+    Personaje : +setNivel( double nuevoNivel)
 
-Ej.- cd assignments/Proyecto
+    Personaje : +porcentajeSalud()
+    Personaje : +imprimeBarra();
+    Personaje : +calculaAtaque(Personaje& objetivo);
+    Personaje : +recibeAtaque(int ptosAtaque);
+    Personaje : +atacar(Personaje& objetivo);
+    Personaje : +imprimir();
 
-```
-Regresar a una **carpeta anterior**, use:
+    Personaje : -double vida
+    Personaje : -double salud
+    Personaje : -double ataque
+    Personaje : -double nivel
 
-```
-Ej.- cd ../
 
-```
 
-Regrese a la **carpeta fuente inical, como está cuando cargas el codespace**, use:
-
-```
-Ej.- cd ../../
-
-```
 
 
