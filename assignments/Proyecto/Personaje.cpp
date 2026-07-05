@@ -1,5 +1,6 @@
 //GEnera la implementación de la clase base Personaje
 #include <iostream>
+#include <cstdlib>
 #include "Personaje.hpp"
 using namespace std;
 
@@ -44,7 +45,7 @@ void Personaje::imprimeBarra(){
 int porcentaje = porcentajeSalud();
 
 int vidaBarra = (porcentaje * 20) / 100;
-int vidabarraperdida = 20 - vidaBarra;
+int vidaBarraPerdida = 20 - vidaBarra;
 
 for (int i = 0; i<vidaBarra; i++){
     cout << "%";
@@ -59,13 +60,14 @@ cout << endl;
 
 int Personaje::calculaAtaque(Personaje& objetivo){
     int mitad = ataque / 2;
+    int total = ataque;
     
     if (objetivo.getNivel() > nivel){
       
         return 1 + rand() % mitad;
     }
     else{
-        return mitad + rand() % (ataque - mitad + 1);
+        return mitad + rand() % (total - mitad + 1);
     }
 }
 
@@ -89,7 +91,7 @@ void Personaje::imprimir()
     cout <<"Vida: " << vida << endl;
     cout <<"Salud: " << salud << endl;
     cout <<"Ataque: " << ataque << endl;
-    cout <<"Nivel:" << nivel << endl;
+    cout <<"Nivel: " << nivel << endl;
 
     imprimeBarra();
 
