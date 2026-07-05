@@ -66,6 +66,13 @@ int Personaje::calculaAtaque(Personaje& objetivo){
     else{
         return mitad + rand() % (ataque - mitad + 1)
     }
+}
 
+void recibeAtaque(int ptosAtaque){
+    salud = salud - ptosAtaque;
 
+    if(salud < 0)
+    {
+        salud = 0;
+    }
 }
